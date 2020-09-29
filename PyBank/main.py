@@ -3,28 +3,35 @@ import csv
 
 bank_csv = 'Resources/budget_data.csv'
 
-
-print(f"Financial Analysis")
-
-
-Total Months = []
-Total = []
-Average Change = []
-Greatest Increase in Profits = []
-Greatest Decrease in Profits = []
-
-Total Months = int(len(bank_csv[0])
-
 with open(bank_csv, 'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
-    for row in csvreader:
-        
+    header = next(csvreader)
+    for row in csvreader:  
 
-    print(csvreader)
+        date = str(bank_csv[0])
+        pandl = str(bank_csv[1])
 
-    csv_header = next(csvreader)
-    
+        count = 0
+        total = 0
+        total_months = len(bank_csv[0])
+        total_pandl = float(sum(pandl))
+        average_change = total_pandl / total_months
+        greatest_increase_in_profits = []
+        greatest_decrease_in_profits = []
 
+        print(f"Financial Analysis")
+        print("--------------------")
+        print(f"Total Months:{total_months}")
+        print(f"Total:{total_pandl}")
+        print(f"Average Change:{average_change}")
+        print(f"Greatest Increase in Profits:{greatest_increase_in_profits}")
+        print(f"Greatest Decrease in Profits:{greatest_decrease_in_profits}")
 
-for row in csvreader:
-        print(row)
+touch(bank_data)
+    print(f"Financial Analysis")
+    print("--------------------")
+    print(f"Total Months:{total_months}")
+    print(f"Total:{total_pandl}")
+    print(f"Average Change:{average_change}")
+    print(f"Greatest Increase in Profits:{greatest_increase_in_profits}")
+    print(f"Greatest Decrease in Profits:{greatest_decrease_in_profits}")
